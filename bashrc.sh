@@ -13,8 +13,8 @@ HISTCONTROL=ignoredups:ignorespace
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=200
-HISTFILESIZE=400
+HISTSIZE=2000
+HISTFILESIZE=4000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -159,10 +159,10 @@ function __makePS1() {
     fi
     PS1+="\u\[${Color_Off}\]"
 
-    if [ -n "${SSH_CONNECTION}" ]; then
+#    if [ -n "${SSH_CONNECTION}" ]; then
         PS1+="\[${BWhite}\]@"
         PS1+="\[${UWhite}${HOST_COLOR}\]\h\[${Color_Off}\]" # host displayed only if ssh connection
-    fi
+#    fi
 
     PS1+=":\[${BYellow}\]\w" # working directory
 
