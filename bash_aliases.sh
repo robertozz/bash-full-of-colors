@@ -30,8 +30,8 @@ if [ -x "`which most 2>&1`" ]; then
     export PAGER=most
 fi
 
-if [ -x "`which vim 2>&1`" ]; then
-        export EDITOR=vim
+if [ -x "`which nano 2>&1`" ]; then
+        export EDITOR=nano
 fi
 
 __add_command_replace_alias tail 'multitail'
