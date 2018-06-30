@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export __LS_OPTIONS='--color=auto -h -p --time-style=+%d-%m-%Y_%H:%M:%S'
+export __LS_OPTIONS='--color=auto -a -h -p --time-style=+%d-%m-%Y_%H:%M:%S'
 
 alias ls='ls $__LS_OPTIONS'
 alias ll='ls $__LS_OPTIONS -l --author -c'
