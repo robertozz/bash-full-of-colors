@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-export __LS_OPTIONS='--color=auto -h'
+export __LS_OPTIONS='--color=auto -h -p --time-style=+%d-%m-%Y_%H:%M:%S'
 
 alias ls='ls $__LS_OPTIONS'
-alias ll='ls $__LS_OPTIONS -l'
+alias ll='ls $__LS_OPTIONS -l --author -c'
 alias la='ls $__LS_OPTIONS -la'
 alias l='ls $__LS_OPTIONS -CF'
 
@@ -16,7 +16,7 @@ alias bc='bc -l'
 
 alias mkdir='mkdir -p -v'
 alias mv='mv -iv'
-alias rm='rm -Iv --one-file-system --preserve-root'
+alias rm='rm -v'
 
 # function checks if the application is installed
 function __add_command_replace_alias() {
