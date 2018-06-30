@@ -15,7 +15,7 @@ alias bc='bc -l'
 
 
 alias mkdir='mkdir -p -v'
-alias mv='mv -iv'
+alias mv='mv -v'
 alias rm='rm -v'
 
 # function checks if the application is installed
