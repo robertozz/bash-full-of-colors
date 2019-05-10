@@ -11,6 +11,15 @@ if [ -x "`which inxi 2>&1`" ]; then
     inxi -IpRS -v0 -c5
 fi
 
-echo
-echo "Have a nice day!"
-echo
+figlet -ct -f roman $HOSTNAME
+echo ""
+echo "Qui è già impostata una versione base di Ubuntu con installato e configurato:"
+echo " - Indirizzo IP impostato da router con il MAC"
+echo " - OpenSSH"
+echo " - IPTables (https://wiki.ubuntu-it.org/Sicurezza/Iptables)"
+echo " - Ufw attivo"
+echo " - Fail2Ban"
+echo ""
+echo "Se devi utilizzarlo per un nuovo server apporta le modifiche in"
+echo " - /etc/hosname"
+echo " - le regole di IPTables e Ufw"
