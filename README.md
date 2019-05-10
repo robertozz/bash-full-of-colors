@@ -1,5 +1,10 @@
 # Bash *full of colors*
 
+Ho aggiunto ccze per colorare i file a video e figlet per visualizzare un testo grande in ASCII art.
+
+```apt install ccze figlet
+```
+
 Powerful `.bashrc` and `.bash_profile` coming together with colorful output. It adds additional information
 to your command prompt and many useful aliases.
 
