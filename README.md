@@ -1,10 +1,24 @@
-# Bash *full of colors*
+# Le mie modifiche
 
 Ho aggiunto ccze per colorare i file a video e figlet per visualizzare un testo grande in ASCII art.
 
 ```
 apt install ccze figlet
 ```
+
+Implemento un comando in ~/.bashrc per vedere i log colorati
+
+```
+tailc /var/log/ESEMPIO
+```
+
+Adatto il file ~/.bash_aliases alle mie esigenze
+
+Inoltre ho aggiunto un messaggio all'avvio che mi avvisa su che server stò lavorando con il figlet nel file ~/.bashrc_profile.
+
+Di seguito il testo originale del repositori da cui questo deriva.
+
+# Bash *full of colors*
 
 Powerful `.bashrc` and `.bash_profile` coming together with colorful output. It adds additional information
 to your command prompt and many useful aliases.
