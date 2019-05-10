@@ -1,9 +1,10 @@
 # Le mie modifiche
 
-Ho aggiunto ccze per colorare i file a video e figlet per visualizzare un testo grande in ASCII art.
+Ho aggiunto ccze per colorare i file a video e figlet per visualizzare un testo grande in ASCII art con il font roman.
 
 ```
 apt install ccze figlet
+wget http://www.figlet.org/fonts/roman.flf && mv roman.flf /usr/share/figlet/roman.flf
 ```
 
 Implemento un comando in ~/.bashrc per vedere i log colorati
@@ -16,7 +17,7 @@ Adatto il file ~/.bash_aliases alle mie esigenze
 
 Inoltre ho aggiunto un messaggio all'avvio che mi avvisa su che server stò lavorando con il figlet nel file ~/.bashrc_profile.
 
-Di seguito il testo originale del repositori da cui questo deriva.
+Di seguito il testo originale del repository da cui questo deriva.
 
 # Bash *full of colors*
 
