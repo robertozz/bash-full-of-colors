@@ -13,6 +13,9 @@ alias ...='cd ../..'
 
 alias bc='bc -l'
 
+tailc () {
+ tail "$@" | ccze -A
+}
 
 alias mkdir='mkdir -p -v'
 alias mv='mv -v'
