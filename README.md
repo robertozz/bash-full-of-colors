@@ -3,7 +3,7 @@
 Ho aggiunto ccze per colorare i file a video e figlet per visualizzare un testo grande in ASCII art con il font roman.
 
 ```
-apt install ccze figlet
+apt install ccze figlet wget
 wget http://www.figlet.org/fonts/roman.flf && mv roman.flf /usr/share/figlet/roman.flf
 ```
 
