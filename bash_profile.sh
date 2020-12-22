@@ -11,7 +11,7 @@ if [ -x "`which inxi 2>&1`" ]; then
     inxi -IpRS -v0 -c5
 fi
 
-figlet -ct -f roman $HOSTNAME
+figlet -ct $HOSTNAME
 echo ""
 echo -e "${BYellow}Qui è già impostata una versione base di Ubuntu con installato e configurato:${Color_Off}"
 echo " - Indirizzo IP impostato da router con il MAC"
