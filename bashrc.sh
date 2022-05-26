@@ -150,7 +150,7 @@ function __makePS1() {
 
     PS1+="${debian_chroot:+($debian_chroot)}"
 
-    if [ ${USER} == root ]; then
+    if [ "$EUID" -ne 0 ]; then
         PS1+="\[${Red}\]" # root
     elif [ ${USER} != ${LOGNAME} ]; then
         PS1+="\[${Blue}\]" # normal user
