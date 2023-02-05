@@ -258,3 +258,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Aggiunte queste 3 righe per Docker
+export XDG_RUNTIME_DIR=/run/user/$UID
+export PATH=/usr/bin:$PATH
+export DOCKER_HOST=unix:///run/user/$UID/docker.sock
+
+cd ~
