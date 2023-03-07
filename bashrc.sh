@@ -115,13 +115,14 @@ fi
 
 #HOST_COLOR=${UGreen}
 
+FQDN=`hostname -f`
 function __makeTerminalTitle() {
     local title=''
 
     local CURRENT_DIR="${PWD/#$HOME/\~}"
 
     if [ -n "${SSH_CONNECTION}" ]; then
-        title+="`hostname`:${CURRENT_DIR} [`whoami`@`hostname -f`]"
+        title+="`hostname`:${CURRENT_DIR} [`whoami`@${FQDN}]"
     else
         title+="${CURRENT_DIR} [`whoami`]"
     fi
@@ -150,7 +151,12 @@ function __makePS1() {
 
     PS1+="${debian_chroot:+($debian_chroot)}"
 
-    if [ "$EUID" -ne 0 ]; then
+    if [ -n "${VIRTUAL_ENV}" ]; then
+        local VENV=`basename $VIRTUAL_ENV`
+        PS1+="\[${BWhite}\](${VENV}) \[${Color_Off}\]" # show virtualenv if in it
+    fi
+
+    if [ ${USER} == root ]; then
         PS1+="\[${Red}\]" # root
     elif [ ${USER} != ${LOGNAME} ]; then
         PS1+="\[${Blue}\]" # normal user
@@ -159,10 +165,10 @@ function __makePS1() {
     fi
     PS1+="\u\[${Color_Off}\]"
 
-#    if [ -n "${SSH_CONNECTION}" ]; then
+    if [ -n "${SSH_CONNECTION}" ]; then
         PS1+="\[${BWhite}\]@"
         PS1+="\[${UWhite}${HOST_COLOR}\]\h\[${Color_Off}\]" # host displayed only if ssh connection
-#    fi
+    fi
 
     PS1+=":\[${BYellow}\]\w" # working directory
 
@@ -242,6 +248,10 @@ fi
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
+fi
+
+if [ -f ~/.bash_local ]; then
+    . ~/.bash_local
 fi
 
 umask 022
