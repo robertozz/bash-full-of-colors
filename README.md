@@ -67,7 +67,7 @@ Many Unix commands have already newer and more feature-rich replacements. Follow
 To install them, run following command:
 
 ```bash
-aptitude install most multitail pydf mtr htop
+sudo apt install most multitail pydf mtr htop
 ```
 
 If you don't have them installed, script falls back to the original command.
