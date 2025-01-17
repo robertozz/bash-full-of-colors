@@ -38,7 +38,7 @@ The most convenient way of installation is to checkout the repository and symlin
 Assuming the installation in home directory:
 
 ```bash
-git clone https://github.com/slomkowski/bash-full-of-colors.git .bash-full-of-colors
+git clone https://github.com/robertozz/bash-full-of-colors.git .bash-full-of-colors
 [ -f .bashrc ] && mv -v .bashrc bashrc.old
 [ -f .bash_profile ] && mv -v .bash_profile bash_profile.old
 [ -f .bash_aliases ] && mv -v .bash_aliases bash_aliases.old
