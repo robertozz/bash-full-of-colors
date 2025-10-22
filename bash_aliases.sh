@@ -14,7 +14,6 @@ alias ...='cd ../..'
 
 alias bc='bc -l'
 
-
 alias mkdir='mkdir -p -v'
 alias mv='mv -iv'
 alias rm='rm -Iv --one-file-system --preserve-root'
@@ -25,6 +24,9 @@ function __add_command_replace_alias() {
         alias $1=$2
     fi
 }
+
+# Dal progetto logviewer
+alias loghtml='tee ~/logviewer/logs_html/last_output.html'
 
 if [ -x "`which most 2>&1`" ]; then
     alias less=most
