@@ -21,3 +21,7 @@ for i in {0..255}; do
   printf "\e[38;5;%sm%3s\e[0m " $i $i
   if (( i % 16 == 15 )); then echo; fi
 done
+
+echo ""
+echo -e "\e[31mRosso\e[0m normale"
+echo -e "\e[1;34mBlu\e[0m intenso"
